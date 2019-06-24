@@ -92,11 +92,11 @@ img {
     h1 a {
         background-image: url(../img/logo.png);
         width: 170px;
-        height: 36px;
-        display: block;
         text-indent: 170px;
+        display: block;
         overflow: hidden;
         white-space: nowrap;
+        height: 36px;
         margin: 7px 15px;
     }
 
@@ -119,26 +119,9 @@ img {
     .menu {
         float: right;
 
-        @media (max-width: 576px) {
-            //隱藏選單開始
-            max-height: 0px;
-            overflow: hidden;
-            //隱藏選單結束
-            transition: max-height 2s;
-            margin-top: 1px;
-            //絕對定位疊在網頁上
-            position: absolute;
-            z-index: 100;
-            //header 高度
-            top: 77px;
-            left: 0px;
-            right: 0px;
-        }
 
         li {
             display: inline;
-
-
         }
 
         li a {
@@ -154,20 +137,46 @@ img {
         }
 
         @media (max-width: 576px) {
+            //隱藏選單開始
+            max-height: 0px;
+            overflow: hidden;
+            //隱藏選單結束
+            transition: max-height 2s;
+            margin-top: 1px;
+            //絕對定位疊在網頁上
+            position: absolute;
+            z-index: 100;
+            //header 高度
+            top: 77px;
+            left: 0px;
+            right: 0px;
+
             li {
                 display: block;
                 background: #00cc99;
             }
 
+            li:hover {
+                background: #fff;
+            }
+
             li a {
                 color: #fff;
+                display: block;
+                padding: 8px 0px;
+                line-height: 40px;
+
             }
 
             li a:hover {
-                color: rgb(216, 216, 216);
+                color: #00cc99;
                 border-bottom: 0px;
             }
         }
+
+
+
+
     }
 
 
